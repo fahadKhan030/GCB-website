@@ -53,7 +53,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <a href="https://wa.me/92479221929" className="fixed bottom-3 right-3">
+        <a href="https://wa.me/92479221929" className="fixed bottom-0 right-3">
           <img src={whatsApp} alt="" />
         </a>
       </div>
