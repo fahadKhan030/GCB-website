@@ -9,8 +9,6 @@ import Service from "./Pages/Service";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import "./index.css";
-// import App from "./App";
-// import App from "./App.jsx";
 
 const router = createBrowserRouter([
   {

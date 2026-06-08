@@ -30,7 +30,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-[550px] mt-7 md:mt-0">
+      <div className="max-w-[550px] mt-6 md:mt-0">
         <img
           className=" object-cover rounded-lg"
           src="https://i.pinimg.com/736x/f6/d5/ac/f6d5ac3b337f8f118960e31d66fa30d2.jpg"

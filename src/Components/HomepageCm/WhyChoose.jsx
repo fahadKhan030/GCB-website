@@ -2,7 +2,6 @@ import React from "react";
 import qua from "../../assets/qua.svg";
 import arc from "../../assets/arc.svg";
 import sur from "../../assets/sur.svg";
-// import engr from "../../assets/engr.svg";
 import exp from "../../assets/exp.svg";
 import time from "../../assets/time.svg";
 import cli from "../../assets/cli.svg";
