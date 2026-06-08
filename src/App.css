@@ -8,3 +8,9 @@
   --color-Tertiary: #9E9E9E;
   --color-neutral: #F5F5F5;
 }
+
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: semibold;
+}
