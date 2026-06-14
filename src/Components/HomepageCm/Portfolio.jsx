@@ -7,10 +7,10 @@ const Portfolio = () => {
     "https://i.pinimg.com/736x/60/fb/4f/60fb4fb270f7ca4a9a647e4c300e3a0f.jpg",
     "https://i.pinimg.com/736x/80/9d/e6/809de6388b9a39a49fafa47ea68cb7f6.jpg",
     "https://i.pinimg.com/736x/80/9d/e6/809de6388b9a39a49fafa47ea68cb7f6.jpg",
-    "https://i.pinimg.com/1200x/56/75/99/5675997ec04031b3538db6a9c615ae92.jpg",
-    "https://i.pinimg.com/736x/f1/73/d8/f173d8f880b3b51a06497e42ec52ec90.jpg",
-    "https://i.pinimg.com/1200x/3c/2e/df/3c2edf64144b59caa3f484eedb7c3d19.jpg",
-    "https://i.pinimg.com/736x/ac/84/83/ac8483d15de7def50b26c505fdcf0878.jpg",
+    // "https://i.pinimg.com/1200x/56/75/99/5675997ec04031b3538db6a9c615ae92.jpg",
+    // "https://i.pinimg.com/736x/f1/73/d8/f173d8f880b3b51a06497e42ec52ec90.jpg",
+    // "https://i.pinimg.com/1200x/3c/2e/df/3c2edf64144b59caa3f484eedb7c3d19.jpg",
+    // "https://i.pinimg.com/736x/ac/84/83/ac8483d15de7def50b26c505fdcf0878.jpg",
   ];
 
   return (

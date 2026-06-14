@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       className="flex flex-col md:flex-row gap-10 md:gap-0 justify-around md:items
-     items-center w-full mt-5 md:mt-12"
+     items-center w-full mt-5 md:mt-20"
     >
       <div className="max-w-[450px] md:max-w-[550px] mt-7 md:mt-0">
         <img
@@ -15,11 +15,12 @@ const About = () => {
           alt=""
         />
       </div>
+      
       <div>
         <div className="flex flex-col">
           <span className="text-secondary">ABOUT OUR COMPANY</span>
           <h1 className="max-w-[550px]">
-            Excellence in Engineering &{" "}
+            Excellence in Engineering &
             <span className="text-primary">Construction</span>
           </h1>
           <p className=" text-gray-500 max-w-[500px] my-2 md:my-3 ">

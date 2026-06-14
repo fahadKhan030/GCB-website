@@ -53,7 +53,7 @@ const WhyChoose = () => {
         {data.map((data) => {
           return (
             <div
-              className="flex flex-col border rounded-2xl border-secondary items-start p-5"
+              className="flex flex-col border rounded-2xl hover:scale-101 hover:shadow-lg duration-300 border-secondary items-start p-5"
               key={data.id}
             >
               <div className="bg-gray-100 w-13 h-13 flex items-center justify-center rounded-full mb-3">

@@ -46,11 +46,11 @@ const Faq = () => {
       </div>
 
       {/* FAQ List */}
-      <div className="w-full max-w-2xl space-y-4">
+      <div className="w-full max-w-2xl space-y-4 ">
         {faq.map((data) => (
           <div
             key={data.id}
-            className="border border-gray-200 rounded-lg overflow-hidden"
+            className="border border-gray-200 rounded-lg overflow-hidden hover:scale-103 duration-300"
           >
             <button
               onClick={() => ToggleAns(data.id)}

@@ -5,14 +5,16 @@ import WhyChoose from "../Components/HomepageCm/WhyChoose";
 import Portfolio from "../Components/HomepageCm/Portfolio";
 import Faq from "../Components/HomepageCm/Faq";
 import About from "../Components/HomepageCm/About";
+import OurProsess from "../Components/HomepageCm/OurProsess";
 
 const Home = () => {
   return (
     <div className="m-auto">
       <Hero />
-      <Status />
       <About />
+      <Status />
       <WhyChoose />
+      <OurProsess/>
       <Portfolio />
       <Faq />
     </div>
