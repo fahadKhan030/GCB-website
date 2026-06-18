@@ -5,8 +5,8 @@ import whatsApp from "../../assets/whatsApp.png";
 const About = () => {
   return (
     <div
-      className="flex flex-col md:flex-row gap-10 md:gap-0 justify-around md:items
-     items-center w-full mt-5 md:mt-20"
+      className="flex flex-col-reverse md:flex-row md:justify-around justify-around md:items-center
+     items-center w-full mt-10 md:mt-12 gap-7"
     >
       <div className="max-w-[450px] md:max-w-[550px] mt-7 md:mt-0">
         <img
@@ -19,11 +19,11 @@ const About = () => {
       <div>
         <div className="flex flex-col">
           <span className="text-secondary">ABOUT OUR COMPANY</span>
-          <h1 className="max-w-[550px]">
+          <h1 className="max-w-[650px] font-semibold">
             Excellence in Engineering &
             <span className="text-primary">Construction</span>
           </h1>
-          <p className=" text-gray-500 max-w-[500px] my-2 md:my-3 ">
+          <p className=" text-gray-500 max-w-[500px] my-2 md:my-3 text-sm ">
             Based in the heart of Swat, Pakistan, Green Consultants & Builders
             has established itself as a leader in sustainable engineering and
             architectural innovation. Since 2014, we have been dedicated to
@@ -32,15 +32,15 @@ const About = () => {
             stewardship.
           </p>
 
-          <div className="bg-primary pl-2 overflow-hidden rounded-xl mt-3">
+          <div className="bg-primary pl-2 overflow-hidden md:hidden lg:block rounded-xl mt-3">
             <div className="bg-[#F3F3F3] p-4 rounded-l-2xl">
-              <p className="max-w-[500px]">
+              <p className="max-w-[500px] text-sm">
                 "At Green Consultants, we don't just build structures; we build
                 trust. Our focus on innovation and sustainability ensures that
                 every project we undertake contributes positively to the
                 environment."
               </p>
-              <div className="flex gap-3 items-center mt-2 ">
+              <div className="flex gap-3 items-center flex-1  mt-2 ">
                 <div className="h-12 overflow-hidden w-12 rounded-full bg-primary">
                   <img src={profile} alt="" />
                 </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div
-      className="flex flex-col md:flex-row md:justify-around justify-around md:items
+      className="flex flex-col md:flex-row md:justify-around justify-around md:items-center
      items-center w-full mt-5 md:mt-12"
     >
       <div className="flex flex-col justify-center items-center md:items-start md:text-left text-center gap-5">
@@ -30,7 +30,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="max-w-[550px] mt-6 md:mt-0">
+      <div className="max-w-[550px] mt-6 md:mt-0 ">
         <img
           className=" object-cover rounded-lg"
           src="https://i.pinimg.com/736x/f6/d5/ac/f6d5ac3b337f8f118960e31d66fa30d2.jpg"

@@ -36,7 +36,7 @@ const OurProsess = () => {
             <h1>Our Proven Process</h1>
             <p>A systematic approach to delivering engineering and construction excellence from concept to completion.</p>
         </div>
-        <div className='grid grid-cols-4 gap-20   mt-10  '>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 lg:gap-20 mt-10'>
         
      {
         OurProsess.map((data) =>

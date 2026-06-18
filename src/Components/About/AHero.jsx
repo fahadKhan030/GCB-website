@@ -2,10 +2,10 @@ import React from 'react'
 
 const AHero = () => {
   return (
-    <div className='flex flex-col md:flex-row md:justify-around justify-around md:items
+    <div className='flex flex-col gap-5 md:gap-0 md:flex-row md:justify-around justify-around md:items
      items-center w-full mt-5 md:mt-12'>
       <div>
-        <div className='max-w-[600px]'>
+        <div className='max-w-[500px]'>
           <span className='bg-secondary text-white rounded-2xl text-sm px-2 py-1'>OUR STORY</span>
         <h1>Pioneering Sustainability in Modern Construction. </h1>
         <p className='text-gray-500 my-5'>Founded on the principles of ecological integrity and engineering excellence, Green Consultants & Builders bridge the gap between architectural ambition and environmental responsibility.</p>
@@ -22,7 +22,7 @@ const AHero = () => {
         </div>
       </div>
 
-      <div>
+      <div className='mt-10 md:mt-0' >
         <img src="https://i.pinimg.com/736x/79/17/b7/7917b7403737be5ada6890fae7d7002f.jpg" className='rounded-2xl' alt="" />
       </div>
 
