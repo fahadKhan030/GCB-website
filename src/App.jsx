@@ -6,11 +6,11 @@ import Footer from "./Footer/Footer";
 
 const App = () => {
   return (
-    <div className="m-2 " >
+    <main className="m-2" >
       <Navbar />
       <Outlet />
       <Footer />
-    </div>
+    </main>
   );
 };
 

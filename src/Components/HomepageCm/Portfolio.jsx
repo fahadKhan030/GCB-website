@@ -14,7 +14,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="mt-10 bg-gray-100 rounded-lg p-2 md:p-5 lg:p-10">
+    <section className="mt-10 bg-gray-100 rounded-lg p-2 md:p-5 lg:p-10">
       <div className="flex justify-between items-end mb-5">
         <div className="">
           <span className="text-secondary">our portfolio</span>
@@ -50,7 +50,7 @@ const Portfolio = () => {
       <button className=" text-primary px-4 py-2 rounded hover:cursor-pointer flex items-end text-end w-full mt-5 justify-end md:hidden  ">
         view all Projects
       </button>
-    </div>
+    </section>
   );
 };
 

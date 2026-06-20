@@ -30,7 +30,7 @@ const OurProsess = () => {
     ]
 
   return (
-    <div className='mx-auto flex flex-col mt-10  p-2 md:p-5 lg:p-10'>
+    <section className='mx-auto flex flex-col mt-10  p-2 md:p-5 lg:p-10'>
         <div className='text-center'>
             <span className='text-primary'>OUR METHODOLOGY</span>
             <h1>Our Proven Process</h1>
@@ -53,7 +53,7 @@ const OurProsess = () => {
          )
      }
         </div>
-    </div>
+    </section>
   )
 }
 

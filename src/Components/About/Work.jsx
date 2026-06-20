@@ -42,7 +42,7 @@ const Work = () => {
     }
 
   return (
-    <div>
+    <section>
         <div className='flex items-center justify-between lg:px-11 md:mt-20'>
             <div>
                 <span className='text-primary text-xm'>Portfolio</span>
@@ -58,7 +58,7 @@ const Work = () => {
         <div>
             
         </div>
-    </div>
+    </section>
   )
 }
 

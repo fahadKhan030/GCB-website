@@ -35,7 +35,7 @@ const Faq = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center py-10">
+    <section className="flex flex-col items-center justify-center py-10">
       {/* Heading */}
       <div className="text-center mb-8">
         <h1>Frequently Asked Questions</h1>
@@ -73,7 +73,7 @@ const Faq = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

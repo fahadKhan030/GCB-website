@@ -9,7 +9,7 @@ import OurProsess from "../Components/HomepageCm/OurProsess";
 
 const Home = () => {
   return (
-    <div className="m-auto">
+    <main >
       <Hero />
       <About />
       <Status />
@@ -17,7 +17,7 @@ const Home = () => {
       <OurProsess/>
       <Portfolio />
       <Faq />
-    </div>
+    </main>
   );
 };
 

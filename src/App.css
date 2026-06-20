@@ -1,6 +1,15 @@
 @import "tailwindcss";
 
 
+html {
+  scroll-behavior: auto;
+}
+
+body {
+   background-color:#F9F9F9;
+  overscroll-behavior: none;
+}
+
 @theme {
   --color-primary: #1B5E20;
   --color-secondary: #66BB6A;
@@ -13,4 +22,37 @@
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: semibold;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  gap: 15px;
+  touch-action: pan-y pinch-zoom;
+}
+
+.embla__slide {
+  flex: 0 0 90%;
+  min-width: 0;
+}
+
+@media (min-width: 651px) {
+  .embla__slide {
+    flex: 0 0 40%;
+  }
+}
+
+@media (min-width: 821px) {
+  .embla__slide {
+    flex: 0 0 25%;
+  }
+}
+
+@media (min-width: 1001px) {
+  .embla__slide {
+    flex: 0 0 25%;
+  }
 }
