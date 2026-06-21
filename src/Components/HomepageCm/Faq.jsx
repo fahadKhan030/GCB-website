@@ -1,77 +1,138 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Faq = () => {
   const [openId, setOpenId] = useState(null);
-
-  const ToggleAns = (id) => {
-    setOpenId(openId === id ? null : id);
-  };
+  const sectionRef = useRef(null);
+  const answerRefs = useRef({});
 
   const faq = [
     {
       id: 1,
       question: "What services does Green Consultants & Builders offer?",
       answer:
-        "We provide a full suite of services including Civil Engineering, Architecture Design, Land Surveying, Construction Management, and specialized consultancy for both residential and commercial projects.",
+        "We provide Civil Engineering, Architecture Design, Land Surveying, Construction Management, and consultancy services.",
     },
     {
       id: 2,
       question: "Do you operate outside of Swat?",
       answer:
-        "Yes, while our main office is in Swat, we serve clients across Pakistan with high-quality engineering and construction solutions.",
+        "Yes, we serve clients across Pakistan with high-quality engineering and construction solutions.",
     },
     {
       id: 3,
       question: "How can I get a project estimate?",
       answer:
-        "You can request a free consultation through our website's contact form, or call us directly. Our experts will review your requirements and provide a detailed quote.",
+        "You can request a free consultation via our contact form or phone call for a detailed quote.",
     },
     {
       id: 4,
       question: "Are your designs focused on sustainability?",
       answer:
-        "Sustainability is at the core of our philosophy. We prioritize eco-friendly materials and energy-efficient designs in every project we undertake.",
+        "Yes, sustainability is core. We use eco-friendly materials and energy-efficient designs.",
     },
   ];
 
-  return (
-    <section className="flex flex-col items-center justify-center py-10">
-      {/* Heading */}
-      <div className="text-center mb-8">
-        <h1>Frequently Asked Questions</h1>
+  const toggle = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
+  };
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(".faq-item", {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.1,
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  // 🔥 ACCORDION ANIMATION FIX
+  useLayoutEffect(() => {
+    faq.forEach((item) => {
+      const el = answerRefs.current[item.id];
+      if (!el) return;
+
+      if (openId === item.id) {
+        gsap.to(el, {
+          height: "auto",
+          opacity: 1,
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      } else {
+        gsap.to(el, {
+          height: 0,
+          opacity: 0,
+          duration: 0.3,
+          ease: "power2.in",
+        });
+      }
+    });
+  }, [openId]);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="flex flex-col items-center justify-center py-14 px-4"
+    >
+      {/* TITLE */}
+      <div className="text-center mb-10">
+        <h1 className="font-semibold">Frequently Asked Questions</h1>
         <p className="text-gray-500 mt-2">
           Find answers to common questions about our services.
         </p>
       </div>
 
-      {/* FAQ List */}
-      <div className="w-full max-w-2xl space-y-4 ">
-        {faq.map((data) => (
-          <div
-            key={data.id}
-            className="border border-gray-200 rounded-lg overflow-hidden hover:scale-103 duration-300"
-          >
-            <button
-              onClick={() => ToggleAns(data.id)}
-              className="w-full p-4 text-left bg-gray-100 flex justify-between items-center"
-            >
-              <span className="text-sm md:text-md hover:cursor-pointer">
-                {data.question}
-              </span>
+      {/* FAQ LIST */}
+      <div className="w-full max-w-2xl space-y-4">
+        {faq.map((item) => {
+          const isOpen = openId === item.id;
 
-              <span>{openId === data.id ? "-" : "+"}</span>
-            </button>
-
+          return (
             <div
-              className={`px-4 transition-all duration-300 ${
-                openId === data.id ? "py-4 block" : "hidden"
-              }`}
+              key={item.id}
+              className="faq-item border border-gray-200 rounded-xl bg-white shadow-sm overflow-hidden"
             >
-              <p className="font-light text-sm">{data.answer}</p>
+              {/* QUESTION */}
+              <button
+                onClick={() => toggle(item.id)}
+                className="w-full p-4 flex justify-between items-center text-left"
+              >
+                <span className="font-medium">{item.question}</span>
+
+                <span
+                  className={`text-xl transition-transform duration-300 ${
+                    isOpen ? "rotate-45" : ""
+                  }`}
+                >
+                  +
+                </span>
+              </button>
+
+              {/* ANSWER */}
+              <div
+                ref={(el) => (answerRefs.current[item.id] = el)}
+                className="px-4 overflow-hidden h-0 opacity-0"
+              >
+                <p className="text-gray-600 text-sm pb-4">
+                  {item.answer}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

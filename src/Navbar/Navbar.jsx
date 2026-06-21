@@ -94,9 +94,9 @@ const Navbar = () => {
   return (
     <header
       ref={navRef}
-      className="navbar sticky top-3 z-50 mx-2 md:mx-6 lg:mx-10"
+      className="navbar sticky top-3 z-50  md:mx-6 lg:mx-10"
     >
-      <div className="flex items-center justify-between px-5 py-3 rounded-2xl bg-white/90 backdrop-blur-xl border border-gray-100 shadow-lg">
+      <div className="flex items-center justify-between px-2 py-1 rounded-2xl bg-white/90 backdrop-blur-xl border border-gray-100 shadow-lg">
         {/* Logo */}
         <div className="flex items-center">
           <img
