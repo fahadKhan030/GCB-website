@@ -59,7 +59,7 @@ const Testimonial = () => {
 
 
     return (
-        <section className='mt-5 md:mt-12 '>
+        <section className='mt-10 md:mt-16 '>
             <div className='text-center'>
                 <span className='text-primary'>CLIENT FEEDBACK</span>
                 <h1>What Industry Leader Say</h1>

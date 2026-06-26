@@ -82,7 +82,7 @@ const OurProsess = () => {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto flex flex-col mt-12 p-3 md:p-5 lg:p-10"
+      className="mx-auto flex flex-col mt-10 md:mt-16"
     >
       {/* HEADER */}
       <div className="text-center">

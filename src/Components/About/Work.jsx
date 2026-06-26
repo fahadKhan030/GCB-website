@@ -43,7 +43,7 @@ const Work = () => {
 
   return (
     <section>
-        <div className='flex items-center justify-between lg:px-11 md:mt-20'>
+        <div className='flex items-center justify-between mt-10 md:mt-16'>
             <div>
                 <span className='text-primary text-xm'>Portfolio</span>
                 <h1>Shaping the Skyline</h1>

@@ -134,7 +134,7 @@ const WhyChoose = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="m-auto mt-12 md:p-5 lg:p-10">
+    <section ref={sectionRef} className="m-auto mt-10 md:mt-16 ">
       <h1 className="why-title font-semibold text-center mt-10 mb-8">
         Why Choose Us?
       </h1>

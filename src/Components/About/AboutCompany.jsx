@@ -46,7 +46,7 @@ const AboutCompany = () => {
 
     return (
         <div className='flex flex-col gap-3 md:gap-0 md:flex-row md:justify-around justify-around md:items
-     items-center w-full mt-5 md:mt-12 '>
+     items-center w-full mt-10 md:mt-16 '>
             <div className='max-w-[600px] md:hidden lg:block'>
                 <span className='text-primary'>COMPANY OVERVIEW</span>
                 <h1>Building a Greener Future Since 2008.</h1>

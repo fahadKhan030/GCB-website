@@ -85,7 +85,7 @@ const Faq = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col items-center justify-center py-14 px-4"
+      className="flex flex-col items-center justify-center mt-10 md:mt-16"
     >
       {/* TITLE */}
       <div className="text-center mb-10">

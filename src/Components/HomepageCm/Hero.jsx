@@ -64,7 +64,7 @@ const Hero = () => {
       gsap.to(".scroll-indicator", {
         y: 12,
         repeat: -1,
-        yoyo: true,
+        yoyo: true, 
         duration: 1,
       });
     }, heroRef);

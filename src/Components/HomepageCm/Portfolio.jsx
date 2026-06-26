@@ -66,7 +66,7 @@ const Portfolio = () => {
   return (
     <section
       ref={sectionRef}
-      className="mt-12 bg-gray-100 rounded-2xl p-4 md:p-6 lg:p-10"
+      className=" bg-gray-100 rounded-2xl mt-10 md:mt-16"
     >
       {/* HEADER */}
       <div className="flex justify-between items-end mb-6">

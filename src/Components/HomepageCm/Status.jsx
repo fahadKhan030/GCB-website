@@ -88,7 +88,7 @@ const Status = () => {
   return (
     <section
       ref={sectionRef}
-      className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-14 md:p-5 lg:p-10"
+      className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-16"
     >
       {statusData.map((item) => (
         <div

@@ -6,7 +6,7 @@ import Testimonial from "../Components/About/Testimonial";
 import Expertise from "../Components/About/Expertise";
 
 const About = () => {
-  return <main>
+  return <main className="max-w-[1400px] mx-auto">
     <AHero/>
     {/* <Work/> */}
     <AboutCompany/>

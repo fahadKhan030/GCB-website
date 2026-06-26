@@ -9,7 +9,7 @@ import OurProsess from "../Components/HomepageCm/OurProsess";
 
 const Home = () => {
   return (
-    <main >
+    <main className="max-w-[1400px] mx-auto" >
       <Hero />
       <About />
       <Status />
