@@ -71,7 +71,7 @@ const Testimonial = () => {
                         {
                             ClientFeedBack.map((data) => {
                                 return <article key={data.id} className='embla__slide flex flex-col p-3 bg-white shadow-sm rounded-md'>
-                                    <blockquote className='border-b-1 pb-3'>
+                                    <blockquote className='border-b-1 pb-3 text-sm text-gray-600'>
                                         <p>
                                             {data.message}
                                         </p>

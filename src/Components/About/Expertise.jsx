@@ -46,13 +46,13 @@ const Expertise = () => {
     ]
     return (
         <section className='mt-10 md:mt-16'>
-            <div className='mx-auto text-center'>
+            <div className='mx-auto text-center flex items-center justify-center flex-col'>
                 <span className='text-primary'> OUR EXPERTISE</span>
                 <h1>Specialized Engineering & Construction Services</h1>
-                <p className=''>From conceptual drafting to final handover, we provide end-to-end solutions tailored to the unique landscape of Swat and across Pakistan.</p>
+                <p className='text-gray-600 max-w-[600px] text-center'>From conceptual drafting to final handover, we provide end-to-end solutions tailored to the unique landscape of Swat and across Pakistan.</p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 md:mt-12 '>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-10 mt-8 md:mt-12 '>
                 {
                     expertise.map((data) => {
                         return <article className='bg-white  rounded-2xl p-5 border border-primary'>
