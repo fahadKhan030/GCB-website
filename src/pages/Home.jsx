@@ -6,6 +6,7 @@ import Portfolio from "../Components/HomepageCm/Portfolio";
 import Faq from "../Components/HomepageCm/Faq";
 import About from "../Components/HomepageCm/About";
 import OurProsess from "../Components/HomepageCm/OurProsess";
+// import TextRevel from "../Components/Service/TextRevel";
 
 const Home = () => {
   return (

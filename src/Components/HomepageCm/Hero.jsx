@@ -93,6 +93,7 @@ const Hero = () => {
 
         <div className="flex flex-wrap justify-center md:justify-start gap-4">
           <a
+          
             className="hero-btn bg-primary text-white px-5 py-3 rounded-lg"
             href="https://wa.me/92479221929"
             target="_blank"
@@ -111,6 +112,7 @@ const Hero = () => {
       <div className="relative">
         <div className="hero-image-wrapper overflow-hidden rounded-2xl">
           <img
+          fetchPriority="high"
             className="hero-image max-w-[550px] w-full object-cover rounded-2xl"
             src="https://i.pinimg.com/736x/f6/d5/ac/f6d5ac3b337f8f118960e31d66fa30d2.jpg"
             alt="Construction"
