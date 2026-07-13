@@ -120,7 +120,7 @@ const Hero = () => {
         </div>
 
         {/* Floating Card */}
-        <div className="hero-card absolute -bottom-5 -left-5 bg-white shadow-xl rounded-xl p-4">
+        <div className="hero-card absolute bottom-0 z-50 -left-2 bg-white shadow-xl rounded-xl p-4">
           <h3 className="text-primary font-bold text-2xl">12+</h3>
           <p className="text-sm text-gray-500">
             Years of Experience
