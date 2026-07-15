@@ -4,16 +4,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const OurProsess = () => {
-  const sectionRef = useRef(null);
-
-  const steps = [
-    {
-      no: 1,
-      headline: "Discovery",
-      title: "Initial Consultation",
-      dis: "Understanding your vision, requirements, and site potential through strategic dialogue.",
-    },
+const processSteps = [
+  {
+    no: 1,
+    headline: "Discovery",
+    title: "Initial Consultation",
+    dis: "Understanding your vision, requirements, and site potential through strategic dialogue.",
+  },
     {
       no: 2,
       headline: "Architecture",
@@ -34,46 +31,76 @@ const OurProsess = () => {
     },
   ];
 
+const OurProsess = () => {
+  const sectionRef = useRef(null);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // 🌿 TITLE REVEAL
-      gsap.from(".process-title", {
+      const cards = gsap.utils.toArray(".process-card");
+
+      const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 80%",
+          toggleActions: "play none none reverse",
         },
-        y: 30,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
       });
 
-      // 🌿 STEPS REVEAL (MAIN FLOW)
-      gsap.from(".process-card", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-        y: 60,
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.15,
-      });
-
-      // 🌿 NUMBER POP EFFECT
-      gsap.from(".process-number", {
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-        scale: 0.5,
-        opacity: 0,
-        duration: 0.6,
-        ease: "back.out(2)",
-        stagger: 0.15,
-      });
+      timeline
+        .from(
+          ".process-title",
+          {
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          0,
+        )
+        .from(
+          ".process-subtitle",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.7,
+            ease: "power3.out",
+          },
+          "<0.1",
+        )
+        .from(
+          ".process-copy",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.7,
+            ease: "power3.out",
+          },
+          "<0.1",
+        )
+        .from(
+          cards,
+          {
+            y: 40,
+            opacity: 0,
+            scale: 0.96,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.16,
+          },
+          "<0.15",
+        )
+        .from(
+          ".process-number",
+          {
+            scale: 0.4,
+            opacity: 0,
+            rotate: -20,
+            duration: 0.6,
+            ease: "back.out(2)",
+            stagger: 0.16,
+          },
+          "<0.25",
+        );
     }, sectionRef);
 
     return () => ctx.revert();
@@ -86,43 +113,36 @@ const OurProsess = () => {
     >
       {/* HEADER */}
       <div className="text-center">
-        <span className="text-primary tracking-wide text-sm">
+        <span className="process-subtitle text-primary tracking-[0.35em] text-sm uppercase">
           OUR METHODOLOGY
         </span>
 
-        <h1 className="process-title mt-2 font-semibold">
+        <h1 className="process-title mt-4 text-3xl md:text-4xl font-semibold">
           Our Proven Process
         </h1>
 
-        <p className="text-gray-600 max-w-2xl mx-auto mt-2">
-          A systematic approach to delivering engineering and construction
-          excellence from concept to completion.
+        <p className="process-copy text-gray-600 max-w-2xl mx-auto mt-4 text-sm md:text-base leading-7">
+          A systematic approach to delivering engineering and construction excellence from concept to completion.
         </p>
       </div>
 
-      {/* STEPS */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-        {steps.map((data) => (
-          <article
-            key={data.no}
-            className="process-card text-center flex flex-col items-center"
-          >
-            {/* NUMBER */}
-            <h5 className="process-number h-12 w-12 text-xl border-2 border-primary flex items-center justify-center rounded-full font-semibold">
-              {data.no}
-            </h5>
+        {processSteps.map((step) => (
+          <article key={step.no} className="process-card group text-center flex flex-col items-center">
+            <div className="process-number h-14 w-14 text-xl border-2 border-primary text-primary flex items-center justify-center rounded-full font-semibold transition-transform duration-300 group-hover:scale-110">
+              {step.no}
+            </div>
 
-            {/* CONTENT */}
-            <div className="bg-white border border-gray-200 rounded-xl p-4 mt-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-              <span className="text-secondary text-sm">
-                {data.headline}
+            <div className="process-card-inner bg-white border border-gray-200 rounded-[28px] p-6 mt-5 shadow-sm transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <span className="text-secondary text-sm uppercase tracking-[0.15em]">
+                {step.headline}
               </span>
 
-              <h4 className="text-lg font-semibold mb-2">
-                {data.title}
+              <h4 className="text-lg font-semibold mb-3 mt-4">
+                {step.title}
               </h4>
 
-              <p className="text-gray-600 text-sm">{data.dis}</p>
+              <p className="text-gray-600 text-sm leading-6">{step.dis}</p>
             </div>
           </article>
         ))}
