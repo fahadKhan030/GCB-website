@@ -113,7 +113,7 @@ const Hero = () => {
         <div className="hero-image-wrapper overflow-hidden rounded-2xl">
           <img
           fetchPriority="high"
-            className="hero-image max-w-[550px] w-full object-cover rounded-2xl"
+            className="hero-image max-w-[500px] w-full object-cover rounded-2xl"
             src="https://i.pinimg.com/736x/f6/d5/ac/f6d5ac3b337f8f118960e31d66fa30d2.jpg"
             alt="Construction"
           />

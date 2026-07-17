@@ -92,7 +92,7 @@ const OurValue = () => {
   return (
     <section
       ref={sectionRef}
-      className="mt-10 md:mt-16 flex flex-col-reverse items-center justify-around gap-10 md:flex-row"
+      className="mt-10 md:mt-16 mx-auto flex flex-col-reverse items-center justify-around gap-10 md:flex-row"
     >
       <div>
         <h4 className="our-value-heading text-2xl font-bold mb-4 text-primary">
@@ -127,7 +127,7 @@ const OurValue = () => {
         </div>
       </div>
 
-      <div className="value-image max-w-[450px] md:max-w-[600px] overflow-hidden rounded-2xl">
+      <div className="value-image max-w-[450px] md:max-w-[500px]  overflow-hidden rounded-2xl">
         <img
           src="https://i.pinimg.com/736x/1b/a7/0f/1ba70f77bd07ee307f97de6de497729a.jpg"
           alt=""

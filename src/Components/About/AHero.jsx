@@ -122,7 +122,7 @@ const AHero = () => {
         <img
         fetchpriority="high"
           src="https://i.pinimg.com/1200x/86/e1/54/86e1545226b25246adb205aabf93041d.jpg"
-          className="story-image rounded-2xl w-full object-cover max-w-[550px]"
+          className="story-image rounded-2xl w-full object-cover max-w-[500px]"
           alt=""
         />
       </div>

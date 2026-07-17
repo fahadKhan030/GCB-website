@@ -94,7 +94,7 @@ const Navbar = () => {
   return (
     <header
       ref={navRef}
-      className="navbar sticky top-3 z-50 mx-auto max-w-[1450px] "
+      className="navbar sticky top-1 z-100 mx-auto max-w-[1450px] "
     >
       <div className="flex items-center justify-between px-2 py-1 rounded-2xl bg-white/90 backdrop-blur-xl border border-gray-100 shadow-lg">
         {/* Logo */}

@@ -6,7 +6,7 @@ import Footer from "./Footer/Footer";
 
 const App = () => {
   return (
-    <main className="m-2" >
+    <main className="mx-3 md:mx-5 lg:mx-7 mt-3" >
       <Navbar />
       <Outlet />
       <Footer />

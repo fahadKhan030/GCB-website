@@ -84,7 +84,7 @@ const About = () => {
       className="flex flex-col-reverse md:flex-row md:justify-around justify-around md:items-center items-center w-full mt-10 md:mt-16 gap-8 overflow-hidden"
     >
       {/* Image */}
-      <div className="max-w-[450px] md:max-w-[550px] mt-7 md:mt-0 overflow-hidden rounded-xl">
+      <div className="max-w-[450px] md:max-w-[500px] mt-7 md:mt-0 overflow-hidden rounded-xl">
         <img
           className="about-image object-cover rounded-xl w-full"
           src="https://i.pinimg.com/736x/78/f7/b9/78f7b9f5c27932b0b0f30163e53ad6c0.jpg"
