@@ -6,9 +6,9 @@ import email from "../../assets/emial.png";
 
 const ContactForm = () => {
   return (
-    <div className="flex items-center justify-between mt-10">
+    <div className="flex flex-col md:flex-row gap-10 items-center justify-around mt-10 md:mt-20">
       <div>
-        <address className="flex flex-col gap-2.5 items-start p-5 bg-[#41493E] rounded-2xl text-white">
+        <address className="flex flex-col  gap-2.5 items-start p-5 bg-[#41493E] rounded-2xl text-white">
           <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
             <img src={location} alt="" className="h-5 w-4" />
           </div>
@@ -19,7 +19,7 @@ const ContactForm = () => {
             <img src={direction} alt="" className="h-2 text-center" />
           </button>
         </address>
-        <div className="flex gap-5 mt-4 ">
+        <div className="flex gap-5 flex-col md:flex-row w-full mt-4 ">
           <p className="flex flex-col gap-2 items-start p-5 bg-[#41493E] rounded-2xl text-white">
             <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
               <img src={phone} alt="" />
@@ -27,7 +27,7 @@ const ContactForm = () => {
             <h6 className="text-xl font-semibold">Call Us</h6>
             <span>+93 333 8958158</span>
           </p>
-          <p className="flex flex-col gap-2.5 items-start p-5 bg-[#41493E]  rounded-2xl text-white">
+          <p className="flex flex-col flex-1 gap-2.5 items-start p-5 bg-[#41493E]  rounded-2xl text-white">
             <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
               <img src={email} alt="" />
             </div>
@@ -38,7 +38,7 @@ const ContactForm = () => {
       </div>
       <form
         action=""
-        className="flex flex-col gap-10 p-10 bg-[#F3F3F3] border-gray-400 border-1 rounded-md"
+        className="flex flex-col max-w-[500px] gap-10 md:p-10 px-3 py-10 w-full bg-[#F3F3F3] border-gray-400 border-1 rounded-xl"
       >
         <h3 className="font-semibold text-xl">Sand a Message</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-5">
@@ -80,6 +80,14 @@ const ContactForm = () => {
               <option value="Contractors">Contractors</option>
             </select>
           </div>
+        </div>
+        <div>
+          <textarea
+            name=""
+            id=""
+            placeholder="Write your Message"
+            className="w-full min-h-[120px] border-gray-400 border-1 rounded-md p-2 "
+          ></textarea>
         </div>
       </form>
     </div>
