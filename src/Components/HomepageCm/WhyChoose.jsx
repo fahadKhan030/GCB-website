@@ -45,12 +45,6 @@ const WhyChoose = () => {
       title: "Timely Delivery",
       dis: "Strict adherence to project timelines ensures your construction milestones are met without compromise.",
     },
-    {
-      id: 6,
-      img: cli,
-      title: "Client Satisfaction",
-      dis: "Our commitment to transparency and communication builds lasting relationships with our clients.",
-    },
   ];
 
   useLayoutEffect(() => {
@@ -136,14 +130,16 @@ const WhyChoose = () => {
   return (
     <section ref={sectionRef} className="m-auto mt-10 md:mt-16 ">
       <h1 className="why-title font-semibold text-center mt-10 mb-8">
-        Why Choose Us?
+        why <span className="text-primary">GCB</span> is the Right Choice for
+        you ?
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {data.map((item) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-row-3 gap-6 mt-8">
+        {data.map((item, index) => (
           <div
             key={item.id}
-            className="why-card flex flex-col items-start p-5 rounded-2xl border border-secondary bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            className={`why-card flex flex-col items-start p-5 rounded-2xl border border-secondary bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2
+            ${index === 2 ? "row-span-3" : ""}`}
           >
             <div className="why-icon bg-gray-100 w-12 h-12 flex items-center justify-center rounded-full mb-3">
               <img src={item.img} alt={item.title} />
