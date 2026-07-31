@@ -8,26 +8,29 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col md:flex-row gap-10 items-center justify-around mt-10 md:mt-20">
       <div>
-        <address className="flex flex-col  gap-2.5 items-start p-5 bg-[#41493E] rounded-2xl text-white">
+        <address className="flex flex-col  gap-2.5 items-start p-5 bg-primary rounded-2xl text-white">
           <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
             <img src={location} alt="" className="h-5 w-4" />
           </div>
           <h5 className="text-xl font-semibold">Our Swat Office</h5>
-          <p>Main Bypass Road, Near Green Chowk, Mingora, Swat, KP, Pakistan</p>
+          <p>
+            Bilal Plaza 2nd Floor Office No:205 Near Attock Petrol Pump Airport
+            Road Mingora swat
+          </p>
           <button className="flex items-center justify-center bg-white text-primary px-2 py-1 gap-2 rounded-md hover:cursor-pointer  ">
             <p>Go Direction</p>
             <img src={direction} alt="" className="h-2 text-center" />
           </button>
         </address>
         <div className="flex gap-5 flex-col md:flex-row w-full mt-4 ">
-          <p className="flex flex-col gap-2 items-start p-5 bg-[#41493E] rounded-2xl text-white">
+          <p className="flex flex-col gap-2 items-start p-5 bg-primary rounded-2xl text-white">
             <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
               <img src={phone} alt="" />
             </div>
             <h6 className="text-xl font-semibold">Call Us</h6>
             <span>+93 333 8958158</span>
           </p>
-          <p className="flex flex-col flex-1 gap-2.5 items-start p-5 bg-[#41493E]  rounded-2xl text-white">
+          <p className="flex flex-col flex-1 gap-2.5 items-start p-5 bg-primary rounded-2xl text-white">
             <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
               <img src={email} alt="" />
             </div>
@@ -89,6 +92,9 @@ const ContactForm = () => {
             className="w-full min-h-[120px] border-gray-400 border-1 rounded-md p-2 "
           ></textarea>
         </div>
+        <button className="border-1 bg-primary text-md lg:text-lg font-semibold text-white py-1 rounded-xl hover:cursor-pointer">
+          sand
+        </button>
       </form>
     </div>
   );

@@ -66,7 +66,7 @@ const Portfolio = () => {
   return (
     <section
       ref={sectionRef}
-      className=" bg-gray-100 rounded-2xl mt-10 md:mt-16"
+      className=" bg-gray-100 rounded-2xl p-3 mt-10 md:mt-16"
     >
       {/* HEADER */}
       <div className="flex justify-between items-end mb-6">
@@ -89,11 +89,7 @@ const Portfolio = () => {
           <div
             key={index}
             className={`portfolio-item overflow-hidden rounded-2xl relative group
-            ${
-              index === 0
-                ? "md:col-span-2 md:row-span-2"
-                : ""
-            }`}
+            ${index === 0 ? "md:col-span-2 md:row-span-2" : ""}`}
           >
             <img
               src={img}
@@ -103,13 +99,12 @@ const Portfolio = () => {
 
             {/* subtle overlay (Apple-style depth) */}
             <div className="absolute inset-0 bg-black/10  opacity-0 group-hover:opacity-100 transition" />
-
           </div>
         ))}
       </div>
 
       {/* MOBILE BUTTON */}
-      <button className="text-primary mt-6 flex justify-end w-full md:hidden">
+      <button className="text-primary mt-6 flex justify-end hover:cursor-pointer w-full md:hidden">
         View all Projects
       </button>
     </section>
