@@ -28,7 +28,7 @@ const Navbar = () => {
             duration: 1,
             ease: "elastic.out(1,0.5)",
           },
-          "-=0.8"
+          "-=0.8",
         )
         .from(
           ".nav-item",
@@ -39,7 +39,7 @@ const Navbar = () => {
             duration: 0.5,
             ease: "power3.out",
           },
-          "-=0.5"
+          "-=0.5",
         )
         .from(
           ".quote-btn",
@@ -49,7 +49,7 @@ const Navbar = () => {
             duration: 0.6,
             ease: "back.out(1.7)",
           },
-          "-=0.4"
+          "-=0.4",
         );
 
       gsap.to(".navbar", {
@@ -81,7 +81,7 @@ const Navbar = () => {
           y: 0,
           duration: 0.4,
           ease: "power3.out",
-        }
+        },
       );
     }
   }, [isMenuOpen]);
@@ -107,24 +107,24 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center font-semibold gap-10">
           <NavLink to="/" className={navLinkClass}>
-            Home
+            <p className="font-semibold">Home</p>
             <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </NavLink>
 
           <NavLink to="/about" className={navLinkClass}>
-            About
+            <p className="font-semibold">About</p>
             <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </NavLink>
 
           <NavLink to="/services" className={navLinkClass}>
-            Services
+            <p className="font-semibold">Services</p>
             <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </NavLink>
 
           <NavLink to="/contact" className={navLinkClass}>
-            Contact
+            <p className="font-semibold">Contact</p>
             <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
           </NavLink>
 
