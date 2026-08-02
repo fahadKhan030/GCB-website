@@ -7,7 +7,7 @@ import arc from "../../assets/arc.svg";
 import sur from "../../assets/sur.svg";
 import exp from "../../assets/exp.svg";
 import time from "../../assets/time.svg";
-import cli from "../../assets/cli.svg";
+// import cli from "../../assets/cli.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
