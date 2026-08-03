@@ -107,7 +107,7 @@ const Project = () => {
           <img
             src={project3}
             alt=""
-            className="w-full h-full rounded-2xl object-cover"
+            className="w-full  rounded-2xl object-cover h-full"
           />
         </div>
       </div>

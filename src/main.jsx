@@ -3,11 +3,11 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./App";
 // import pages
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Service from "./pages/Service.jsx";
-import Project from "./pages/Project.jsx";
-import Contact from "./pages/Contact.jsx";
+import Home from "././Pages/Home.jsx";
+import About from "././pages/About.jsx";
+import Service from "././pages/Service.jsx";
+import Project from "././pages/Project.jsx";
+import Contact from "././spages/Contact.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([

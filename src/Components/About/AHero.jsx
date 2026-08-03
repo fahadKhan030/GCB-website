@@ -76,7 +76,7 @@ const AHero = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col gap-10 lg:flex-row md:justify-around md:items-center min-h-[85vh] w-full "
+      className="flex flex-col gap-10 lg:flex-row md:justify-around items-center lg lg:text-start text-center md:items-center min-h-[85vh] w-full "
     >
       {/* LEFT SIDE */}
       <div className="max-w-[600px]">
@@ -98,8 +98,8 @@ const AHero = () => {
         </p>
 
         {/* Mission / Vision */}
-        <div className="flex flex-col md:flex-row gap-6 mt-6">
-          <article className="story-card border-l-4 border-primary pl-4">
+        <div className="flex items-center lg:items-start flex-col md:flex-row gap-6 mt-6">
+          <article className="story-card border-0 md:border-l-0 lg:border-l-4 border-primary pl-4">
             <h5 className="font-semibold text-md">OUR MISSION</h5>
             <p className="text-sm text-gray-500 max-w-[300px]">
               To design and build structures that breathe with the environment,
@@ -107,7 +107,7 @@ const AHero = () => {
             </p>
           </article>
 
-          <article className="story-card border-l-4 border-primary pl-4">
+          <article className="story-card border-0 md:border-l-4 border-primary pl-4">
             <h5 className="font-semibold text-md">OUR VISION</h5>
             <p className="text-sm text-gray-500 max-w-[300px]">
               A world where every skyscraper is a vertical forest and every home
@@ -118,11 +118,11 @@ const AHero = () => {
       </div>
 
       {/* RIGHT SIDE IMAGE */}
-      <div className="overflow-hidden rounded-2xl">
+      <div className="overflow-hidden rounded-2xl ">
         <img
           fetchpriority="high"
           src="https://i.pinimg.com/1200x/86/e1/54/86e1545226b25246adb205aabf93041d.jpg"
-          className="story-image rounded-2xl w-full object-cover h-auto max-w-[500px]"
+          className="story-image rounded-2xl w-full  object-cover h-auto max-w-[500px]"
           alt=""
         />
       </div>

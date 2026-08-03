@@ -68,13 +68,13 @@ const AboutCompany = () => {
           })}
         </div>
       </div>
-      <div className="grid  grid-cols-2  gap-2 md:gap-4 mt-7 md:mt-0 lg:gap-10 max-w-[600px]">
+      <div className="grid  grid-cols-2  gap-2 md:gap-4 mt-7 md:mt-0 lg:gap-7 max-w-[600px]">
         {card.map((card) => {
           return (
             <article className="p-3 md:p-5 border border-primary rounded-3xl">
               <img src={card.icon} alt="" />
               <h3 className="my-2 font-semibold">{card.heading}</h3>
-              <p>{card.about}</p>
+              <p className="text-sm">{card.about}</p>
             </article>
           );
         })}
