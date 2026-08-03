@@ -8,7 +8,7 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col md:flex-row gap-10 items-center justify-around mt-10 md:mt-20">
       <div>
-        <address className="flex flex-col  gap-2.5 items-start p-5 bg-primary rounded-2xl text-white">
+        <address className="flex flex-col  gap-2.5 items-start p-5 bg-primary max-w-[500px] rounded-2xl text-white">
           <div className="p-2 bg-white rounded-full w-9 flex items-center justify-center">
             <img src={location} alt="" className="h-5 w-4" />
           </div>

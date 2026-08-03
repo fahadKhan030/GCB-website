@@ -5,14 +5,16 @@ import AboutCompany from "../Components/About/AboutCompany";
 import Testimonial from "../Components/About/Testimonial";
 import Expertise from "../Components/About/Expertise";
 import Faq from "../Components/HomepageCm/Faq";
+import Team from "../Components/About/Team";
 
 const About = () => {
   return (
-    <main className="max-w-[1400px] mx-auto">
+    <main className="max-w-[1400px] mt-10 lg:mt-0 mx-auto">
       <AHero />
       <AboutCompany />
-      <Testimonial />
       <Expertise />
+      <Team />
+      <Testimonial />
       <Faq />
     </main>
   );

@@ -12,7 +12,7 @@ import OurProsess from "../Components/HomepageCm/OurProsess";
 const Home = () => {
   return (
     <>
-      <main className="max-w-[1400px] mx-auto">
+      <main className="max-w-[1400px] mx-auto mt-10 lg:mt-0 ">
         <Hero />
         <About />
         <Status />

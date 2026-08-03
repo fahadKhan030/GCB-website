@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import next from "./../assets/nextbutton.png";
 import back from "./../assets/backbutton.png";
+// image for the project section
+import project from "./../assets/p-1.jpeg";
+import project1 from "./../assets/p-2.jpeg";
+import project3 from "./../assets/p-3.jpeg";
 // GSAP
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -10,10 +14,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Project = () => {
   useEffect(() => {
+    gsap.to(".image-wrap", {
+      gap: "2px",
+      scrollTrigger: {
+        trigger: ".image-wrap",
+        start: "top 100%",
+        end: "bottom 20%",
+        scrub: 1,
+      },
+    });
     gsap.to(".Project-img", {
-      width: "30%",
-      marginLeft: "1px",
-      marginRight: "1px",
+      width: "60%",
+      gap: "20px",
       transformOrigin: "center center",
       ease: "none",
       scrollTrigger: {
@@ -24,14 +36,6 @@ const Project = () => {
       },
     });
   }, []);
-
-  const image = [
-    "https://i.pinimg.com/1200x/cc/f2/06/ccf2068b518abd340a70c0d65ed26c99.jpg",
-    // "https://i.pinimg.com/1200x/af/d8/8b/afd88bc36df3eedf901fde7d301485f4.jpg",
-    // "https://i.pinimg.com/1200x/b5/2d/9b/b52d9b21e7fb5ea0b9dff26205c7689e.jpg",
-    // "https://i.pinimg.com/1200x/0a/0d/36/0a0d3680ce5fba9351b0df9918ceef81.jpg",
-    // "https://i.pinimg.com/736x/8c/3e/35/8c3e35fcb3f26ed80f127cc9a17de252.jpg",
-  ];
 
   return (
     <section className="  mt-20 overflow-hidden ">
@@ -52,38 +56,38 @@ const Project = () => {
         </button> */}
       </div>
       {/* contant on this section */}
-      <div className="flex items-center justify-center">
+      <div className="image-wrap flex items-center gap-30 justify-center">
         <div className="Project-img relative flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[500px] min-[1200px]:h-[700px]">
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
             <h3 className="text-2xl font-bold">
               This is our featured project design
             </h3>
 
-            <button className="mt-4 w-fit rounded-full bg-white px-6 py-2 text-black">
+            <button className="mt-4 w-fit rounded-full hover:cursor-pointer bg-white px-6 py-2 text-black">
               View Details
             </button>
           </div>
 
           <img
-            src="https://i.pinimg.com/1200x/b5/2d/9b/b52d9b21e7fb5ea0b9dff26205c7689e.jpg"
+            src={project}
             alt=""
             className="w-full h-full rounded-2xl object-cover"
           />
         </div>
 
-        <div className="Project-img relative flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[500px]  min-[1200px]:h-[700px] mx-10 ">
+        <div className="Project-img relative flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[500px]  min-[1200px]:h-[700px]">
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
             <h3 className="text-2xl font-bold">
               This is our featured project design
             </h3>
 
-            <button className="mt-4 w-fit rounded-full bg-white px-6 py-2 text-black">
+            <button className="mt-4 w-fit rounded-full  hover:cursor-pointer bg-white px-6 py-2 text-black">
               View Details
             </button>
           </div>
 
           <img
-            src="https://i.pinimg.com/1200x/b5/2d/9b/b52d9b21e7fb5ea0b9dff26205c7689e.jpg"
+            src={project1}
             alt=""
             className="w-full h-full rounded-2xl object-cover"
           />
@@ -95,13 +99,13 @@ const Project = () => {
               This is our featured project design
             </h3>
 
-            <button className="mt-4 w-fit rounded-full bg-white px-6 py-2 text-black">
+            <button className="mt-4 w-fit rounded-full  hover:cursor-pointer bg-white px-6 py-2 text-black">
               View Details
             </button>
           </div>
 
           <img
-            src="https://i.pinimg.com/1200x/b5/2d/9b/b52d9b21e7fb5ea0b9dff26205c7689e.jpg"
+            src={project3}
             alt=""
             className="w-full h-full rounded-2xl object-cover"
           />
@@ -109,10 +113,10 @@ const Project = () => {
       </div>
 
       <div className="flex items-center justify-center gap-2 mt-3">
-        <button className="p-3 rounded-full border border-primary hover:cursor-pointer">
+        <button className="p-3 rounded-full border border-primary ">
           <img src={back} alt="" />
         </button>
-        <button className="p-3 rounded-full border border-primary hover:cursor-pointer">
+        <button className="p-3 rounded-full border border-primary">
           <img src={next} alt="" />
         </button>
       </div>

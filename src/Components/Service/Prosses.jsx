@@ -35,11 +35,11 @@ const Prosses = () => {
 
       {/* Center Line */}
 
-      <div className="md:grid md:grid-cols-2 gap-3 px-5 md:gap-x-10 ">
+      <div className="relative md:grid md:grid-cols-2 gap-3 px-5 md:gap-x-10 ">
         {steps.map((step, index) => {
           return (
             <div className="">
-              <div className=" absolute left-1/2  md:top-74 -z-20 md:h-[350px]  w-0 md:w-1 -translate-x-1/2 bg-green-600"></div>
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 bg-green-600"></div>
               {index % 2 === 0 ? (
                 <div className="md:flex md:items-center md:justify-end md:text-end md:mx-5  ">
                   <div className="flex py-5">

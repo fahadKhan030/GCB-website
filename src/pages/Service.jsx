@@ -4,14 +4,15 @@ import OurValue from "../Components/Service/OurValue";
 // import TextReveal from "../Components/Service/TextReveal";
 import Prosses from "../Components/Service/Prosses";
 
-
 const ServiceS = () => {
-  return <div>
-    <Service />
-    < OurValue />
-  {/* <TextReveal/> */}
-  <Prosses/>
-  </div>;
+  return (
+    <div className="max-w-[1400px] mx-auto mt-10 lg:mt-0 ">
+      <Service />
+      <OurValue />
+      {/* <TextReveal/> */}
+      <Prosses />
+    </div>
+  );
 };
 
 export default ServiceS;

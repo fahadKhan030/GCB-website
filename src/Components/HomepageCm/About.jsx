@@ -34,7 +34,7 @@ const About = () => {
             opacity: 0,
             duration: 0.6,
           },
-          "-=0.8"
+          "-=0.8",
         )
         .from(
           ".about-heading",
@@ -44,7 +44,7 @@ const About = () => {
             duration: 0.8,
             ease: "power3.out",
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           ".about-text",
@@ -53,7 +53,7 @@ const About = () => {
             opacity: 0,
             duration: 0.8,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           ".about-card",
@@ -63,7 +63,7 @@ const About = () => {
             duration: 1,
             ease: "power3.out",
           },
-          "-=0.3"
+          "-=0.3",
         );
 
       gsap.to(".whatsapp-btn", {
@@ -152,11 +152,7 @@ const About = () => {
           rel="noopener noreferrer"
           className="whatsapp-btn fixed bottom-5 right-5 z-50"
         >
-          <img
-            src={whatsApp}
-            alt="WhatsApp"
-            className="w-14 md:w-16"
-          />
+          <img src={whatsApp} alt="WhatsApp" className="w-14 md:w-16" />
         </a>
       </div>
     </section>

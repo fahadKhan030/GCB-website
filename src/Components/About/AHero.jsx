@@ -76,7 +76,7 @@ const AHero = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col gap-10 md:flex-row md:justify-around md:items-center min-h-[85vh] w-full "
+      className="flex flex-col gap-10 lg:flex-row md:justify-around md:items-center min-h-[85vh] w-full "
     >
       {/* LEFT SIDE */}
       <div className="max-w-[600px]">
@@ -120,9 +120,9 @@ const AHero = () => {
       {/* RIGHT SIDE IMAGE */}
       <div className="overflow-hidden rounded-2xl">
         <img
-        fetchpriority="high"
+          fetchpriority="high"
           src="https://i.pinimg.com/1200x/86/e1/54/86e1545226b25246adb205aabf93041d.jpg"
-          className="story-image rounded-2xl w-full object-cover max-w-[500px]"
+          className="story-image rounded-2xl w-full object-cover h-auto max-w-[500px]"
           alt=""
         />
       </div>
