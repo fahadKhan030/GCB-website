@@ -9,7 +9,7 @@ import Team from "../Components/About/Team";
 
 const About = () => {
   return (
-    <main className="max-w-[1400px] mt-10  mx-auto">
+    <main className="max-w-[1400px] mt-10 lg:mt-0  mx-auto">
       <AHero />
       <AboutCompany />
       <Expertise />
