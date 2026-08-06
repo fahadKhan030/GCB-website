@@ -6,12 +6,12 @@ import Prosses from "../Components/Service/Prosses";
 
 const ServiceS = () => {
   return (
-    <div className="max-w-[1400px] mx-auto mt-10 lg:mt-0 ">
+    <main className="max-w-[1400px] mx-auto mt-10 lg:mt-0  px-3 md:px-5 lg:px-10">
       <Service />
       <OurValue />
       {/* <TextReveal/> */}
       <Prosses />
-    </div>
+    </main>
   );
 };
 

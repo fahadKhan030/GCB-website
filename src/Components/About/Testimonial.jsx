@@ -76,7 +76,7 @@ const Testimonial = () => {
               return (
                 <article
                   key={data.id}
-                  className="embla__slide flex flex-col p-3 hover:cursor-grab  bg-white shadow-sm rounded-md"
+                  className="embla__slide flex flex-col p-3 hover:cursor-grab bg-white shadow-sm rounded-md"
                 >
                   <blockquote className="border-b-1 pb-3 text-sm text-gray-600">
                     <p>{data.message}</p>

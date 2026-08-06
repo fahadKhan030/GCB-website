@@ -21,7 +21,7 @@ const Hero = () => {
             opacity: 0,
             duration: 0.8,
           },
-          "-=0.5"
+          "-=0.5",
         )
         .from(
           ".hero-btn",
@@ -31,7 +31,7 @@ const Hero = () => {
             stagger: 0.15,
             duration: 0.6,
           },
-          "-=0.3"
+          "-=0.3",
         )
         .from(
           ".hero-image-wrapper",
@@ -40,7 +40,7 @@ const Hero = () => {
             duration: 1.4,
             ease: "power4.inOut",
           },
-          "-=1"
+          "-=1",
         )
         .from(
           ".hero-card",
@@ -50,7 +50,7 @@ const Hero = () => {
             duration: 0.8,
             ease: "back.out(1.7)",
           },
-          "-=0.5"
+          "-=0.5",
         );
 
       gsap.to(".hero-image", {
@@ -64,7 +64,7 @@ const Hero = () => {
       gsap.to(".scroll-indicator", {
         y: 12,
         repeat: -1,
-        yoyo: true, 
+        yoyo: true,
         duration: 1,
       });
     }, heroRef);
@@ -81,9 +81,7 @@ const Hero = () => {
       <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left gap-5">
         <h1 className="hero-title font-semibold max-w-[600px]">
           Building Excellence Through{" "}
-          <span className="text-primary">
-            Engineering & Innovation
-          </span>
+          <span className="text-primary">Engineering & Innovation</span>
         </h1>
 
         <p className="hero-text text-gray-600 text-lg max-w-[500px]">
@@ -93,9 +91,8 @@ const Hero = () => {
 
         <div className="flex flex-wrap justify-center md:justify-start gap-4">
           <a
-          
             className="hero-btn bg-primary text-white px-5 py-3 rounded-lg"
-            href="https://wa.me/92479221929"
+            href="https://wa.me/+923479221929"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -112,7 +109,7 @@ const Hero = () => {
       <div className="relative">
         <div className="hero-image-wrapper overflow-hidden rounded-2xl">
           <img
-          fetchPriority="high"
+            fetchPriority="high"
             className="hero-image max-w-[500px] w-full object-cover rounded-2xl"
             src="https://i.pinimg.com/736x/f6/d5/ac/f6d5ac3b337f8f118960e31d66fa30d2.jpg"
             alt="Construction"
@@ -122,9 +119,7 @@ const Hero = () => {
         {/* Floating Card */}
         <div className="hero-card absolute bottom-0 z-50 -left-2 bg-white shadow-xl rounded-xl p-4">
           <h3 className="text-primary font-bold text-2xl">12+</h3>
-          <p className="text-sm text-gray-500">
-            Years of Experience
-          </p>
+          <p className="text-sm text-gray-500">Years of Experience</p>
         </div>
       </div>
 

@@ -147,7 +147,7 @@ const About = () => {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/92479221929"
+          href="https://wa.me/+923479221929"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-btn fixed bottom-5 right-5 z-50"

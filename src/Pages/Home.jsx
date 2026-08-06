@@ -12,15 +12,16 @@ import OurProsess from "../Components/HomepageCm/OurProsess";
 const Home = () => {
   return (
     <>
-      <main className="max-w-[1400px] mx-auto mt-10 lg:mt-0 ">
+      <main className="max-w-[1400px] mx-auto mt-10 lg:mt-0  px-3 md:px-5 lg:px-10 ">
         <Hero />
         <About />
         <Status />
         <WhyChoose />
         <OurProsess />
       </main>
-
-      <Portfolio />
+      <div classNmae="">
+        <Portfolio />
+      </div>
 
       <main className="max-w-[1400px] mx-auto">
         <Faq />

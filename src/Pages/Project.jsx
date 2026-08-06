@@ -5,6 +5,9 @@ import back from "./../assets/backbutton.png";
 import project from "./../assets/p-1.jpeg";
 import project1 from "./../assets/p-2.jpeg";
 import project3 from "./../assets/p-3.jpeg";
+// emblam carousel
+import useEmblaCarousel from "embla-carousel-react";
+
 // GSAP
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -13,9 +16,17 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Project = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    align: "center",
+  });
+
+  const goToPrev = () => emblaApi.scrollPrev();
+  const goToNext = () => emblaApi.scrollNext();
+
   useEffect(() => {
     gsap.to(".image-wrap", {
-      gap: "2px",
+      gap: "1px",
       scrollTrigger: {
         trigger: ".image-wrap",
         start: "top 100%",
@@ -24,8 +35,9 @@ const Project = () => {
       },
     });
     gsap.to(".Project-img", {
-      width: "60%",
-      gap: "20px",
+      baseline: "center center",
+      gap: "40px",
+      flexGrow: "60%",
       transformOrigin: "center center",
       ease: "none",
       scrollTrigger: {
@@ -38,7 +50,7 @@ const Project = () => {
   }, []);
 
   return (
-    <section className="  mt-20 overflow-hidden ">
+    <section className="embla  mt-20 overflow-hidden ">
       {/*  heading of this section  */}
       <div className="flex justify-center items-center text-center mb-6">
         <div>
@@ -56,67 +68,75 @@ const Project = () => {
         </button> */}
       </div>
       {/* contant on this section */}
-      <div className="image-wrap flex items-center gap-30 justify-center">
-        <div className="Project-img relative flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[500px] min-[1200px]:h-[700px]">
-          <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
-            <h3 className="text-2xl font-bold">
-              This is our featured project design
-            </h3>
+      <div className="embla__viewport overflow-hidden " ref={emblaRef}>
+        <div className="embla__container image-wrap flex items-center flex-nowrap gap-2">
+          <div className="embla__slide-p Project-img relative  flex-shrink-0  h-[300px] md:h-[400px] lg:h-[500px] min-[1200px]:h-[700px]">
+            <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+              <h3 className="text-2xl font-bold">
+                This is our featured project design
+              </h3>
 
-            <button className="mt-4 w-fit rounded-full hover:cursor-pointer bg-white px-6 py-2 text-black">
-              View Details
-            </button>
+              <button className="mt-4 w-fit rounded-full hover:cursor-pointer bg-white px-6 py-2 text-black">
+                View Details
+              </button>
+            </div>
+
+            <img
+              src={project}
+              alt=""
+              className="w-full h-full rounded-2xl object-cover"
+            />
           </div>
 
-          <img
-            src={project}
-            alt=""
-            className="w-full h-full rounded-2xl object-cover"
-          />
-        </div>
+          <div className="embla__slide-p Project-img relative flex-shrink-0  h-[300px] md:h-[400px] lg:h-[500px]  min-[1200px]:h-[700px]">
+            <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+              <h3 className="text-2xl font-bold">
+                This is our featured project design
+              </h3>
 
-        <div className="Project-img relative flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[500px]  min-[1200px]:h-[700px]">
-          <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
-            <h3 className="text-2xl font-bold">
-              This is our featured project design
-            </h3>
+              <button className="mt-4 w-fit rounded-full  hover:cursor-pointer bg-white px-6 py-2 text-black">
+                View Details
+              </button>
+            </div>
 
-            <button className="mt-4 w-fit rounded-full  hover:cursor-pointer bg-white px-6 py-2 text-black">
-              View Details
-            </button>
+            <img
+              src={project1}
+              alt=""
+              className="w-full h-full rounded-2xl object-cover"
+            />
           </div>
 
-          <img
-            src={project1}
-            alt=""
-            className="w-full h-full rounded-2xl object-cover"
-          />
-        </div>
+          <div className="embla__slide-p Project-img relative flex-shrink-0  h-[300px] md:h-[400px] lg:h-[500px]  min-[1200px]:h-[700px]">
+            <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
+              <h3 className="text-2xl font-bold">
+                This is our featured project design
+              </h3>
 
-        <div className="Project-img relative flex-shrink-0 w-full h-[300px] md:h-[400px] lg:h-[500px]  max-[1200px]:h-[700px]">
-          <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 text-white">
-            <h3 className="text-2xl font-bold">
-              This is our featured project design
-            </h3>
+              <button className="mt-4 w-fit rounded-full  hover:cursor-pointer bg-white px-6 py-2 text-black">
+                View Details
+              </button>
+            </div>
 
-            <button className="mt-4 w-fit rounded-full  hover:cursor-pointer bg-white px-6 py-2 text-black">
-              View Details
-            </button>
+            <img
+              src={project3}
+              alt=""
+              className="w-full  rounded-2xl object-cover h-full"
+            />
           </div>
-
-          <img
-            src={project3}
-            alt=""
-            className="w-full  rounded-2xl object-cover h-full"
-          />
         </div>
       </div>
 
       <div className="flex items-center justify-center gap-2 mt-3">
-        <button className="p-3 rounded-full border border-primary ">
+        <button
+          onClick={goToPrev}
+          className="p-3 rounded-full border border-primary "
+        >
           <img src={back} alt="" />
         </button>
-        <button className="p-3 rounded-full border border-primary">
+        <button
+          onClick={goToNext}
+          className="p-3 rounded-full border border-primary"
+        >
           <img src={next} alt="" />
         </button>
       </div>

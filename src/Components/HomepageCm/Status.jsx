@@ -8,9 +8,9 @@ const Status = () => {
   const sectionRef = useRef(null);
 
   const statusData = [
-    { id: 1, value: "150+", title: "Projects done" },
-    { id: 2, value: "100%", title: "Happy clients" },
-    { id: 3, value: "20+", title: "Years of experience" },
+    { id: 1, value: "2000+", title: "Projects done" },
+    { id: 2, value: "90%", title: "Happy clients" },
+    { id: 3, value: "15+", title: "Years of experience" },
     { id: 4, value: "50+", title: "Team members" },
   ];
 
@@ -88,12 +88,12 @@ const Status = () => {
   return (
     <section
       ref={sectionRef}
-      className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 md:mt-16"
+      className="grid grid-cols-2 md:grid-cols-4 py-2 gap-4 mt-10 md:mt-16"
     >
       {statusData.map((item) => (
         <div
           key={item.id}
-          className="status-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col items-center"
+          className="status-card bg-white rounded-2xl p-6 border-[1px] hover:shadow-2xl border-primary transition-all duration-300 hover:-translate-y-2 flex flex-col items-center"
         >
           <h2 className="status-number text-3xl md:text-4xl font-bold text-primary">
             {item.value}

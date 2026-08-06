@@ -9,14 +9,18 @@ import Team from "../Components/About/Team";
 
 const About = () => {
   return (
-    <main className="max-w-[1400px] mt-10 lg:mt-0  mx-auto">
-      <AHero />
-      <AboutCompany />
-      <Expertise />
-      <Team />
+    <>
+      <main className="max-w-[1400px] mt-10 lg:mt-0  mx-auto px-3 md:px-5 lg:px-10">
+        <AHero />
+        <AboutCompany />
+        <Expertise />
+        <Team />
+      </main>
       <Testimonial />
-      <Faq />
-    </main>
+      <main>
+        <Faq />
+      </main>
+    </>
   );
 };
 
