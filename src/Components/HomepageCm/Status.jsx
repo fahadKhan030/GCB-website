@@ -93,7 +93,7 @@ const Status = () => {
       {statusData.map((item) => (
         <div
           key={item.id}
-          className="status-card bg-white rounded-2xl p-6 border-[1px] hover:shadow-2xl border-primary transition-all duration-300 hover:-translate-y-2 flex flex-col items-center"
+          className="status-card bg-white rounded-2xl p-6 border-[1px] border-primary transition-all duration-300 hover:-translate-y-2 flex flex-col items-center"
         >
           <h2 className="status-number text-3xl md:text-4xl font-bold text-primary">
             {item.value}
